@@ -4039,3 +4039,14 @@ input, select, textarea {
 	.single-page-main strong {
 		color: #01846f;
 	}
+
+	h2.blog-title {
+		font-size: 1.7em;
+		text-decoration: underline;
+	}
+
+	time.blog-date {
+		font-size: .8em;
+		color: #2e4a6b;
+	}
+
