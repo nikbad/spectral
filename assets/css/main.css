@@ -4050,3 +4050,18 @@ input, select, textarea {
 		color: #2e4a6b;
 	}
 
+	.contact-form-success {
+		color: #01846f;
+	}
+
+	.contact-form-error {
+		color: #ed4832;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+
+
+

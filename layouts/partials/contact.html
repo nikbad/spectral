@@ -8,7 +8,7 @@
       <h2>{{ .title }}</h2>
       {{ partial "body_text.html" (dict "context" . "md" $md) }}
     </header>
-    <form method="post" netlify>
+    <form id="contact-form" method="post" netlify>
       <div class="row gtr-uniform">
         <input type="hidden" name="subject" value="{{ .subject }}" />
         <div class="col-6 col-12-xsmall">
@@ -28,6 +28,8 @@
         </div>
       </div>
     </form>
+    <div id="contact-form-success" class="contact-form-success hidden">Ihre Nachricht wurde erfolgreich übermittelt.</div>
+    <div id="contact-form-error" class="contact-form-error hidden">Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten.</div>
   </div>
 </section>
 {{ end }}

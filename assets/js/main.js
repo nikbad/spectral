@@ -87,3 +87,39 @@ window.onbeforeunload = () => {
     form.reset();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+	const contactForm = document.getElementById("contact-form");
+	const formFeedbackSuccess = document.getElementById("contact-form-success");
+	const formFeedbackError = document.getElementById("contact-form-error");
+
+  
+	contactForm.addEventListener("submit", function (event) {
+	  event.preventDefault();
+  
+	  const formData = new FormData(contactForm);
+  
+	  fetch("/", {
+		method: "POST",
+		headers: { "Content-Type": "application/x-www-form-urlencoded" },
+		body: new URLSearchParams(formData).toString(),
+	  })
+		.then(function (response) {
+		  if (!response.ok) {
+			throw new Error("Network response was not ok");
+		  }
+		  return response.text();
+		})
+		.then(function (data) {
+		console.log("success - contact form");
+		  // Display success message
+		  formFeedbackSuccess.classList.remove("hidden");
+		  contactForm.reset();
+		})
+		.catch(function (error) {
+			console.log("error - contact form");
+		  // Display error message
+		  formFeedbackError.classList.remove("hidden");
+		});
+	});
+  });
