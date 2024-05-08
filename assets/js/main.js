@@ -111,13 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		  return response.text();
 		})
 		.then(function (data) {
-		console.log("success - contact form");
 		  // Display success message
 		  formFeedbackSuccess.classList.remove("hidden");
 		  contactForm.reset();
 		})
 		.catch(function (error) {
-			console.log("error - contact form");
 		  // Display error message
 		  formFeedbackError.classList.remove("hidden");
 		});

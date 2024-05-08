@@ -30,3 +30,14 @@ other = "Alle Artikel"
 
 [readmore]
 other = "Weiterlesen…"
+
+
+[imprintanddataprotection]
+other = "Impressum und Datenschutz"
+
+[messagesuccessfullytransmitted]
+other = "Ihre Nachricht wurde erfolgreich übermittelt."
+
+[errorwhensendingmessage]
+other = "Ihre Nachricht wurde erfolgreich übermittelt."
+
